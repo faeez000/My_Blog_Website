@@ -52,6 +52,14 @@
   .post-img {
     height: auto;
   }
+
+  .blog-article-content span {
+    display: block;
+    width: 150px;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .adjust-year {
     position: static;
     height: auto;

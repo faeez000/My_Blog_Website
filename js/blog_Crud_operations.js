@@ -12,6 +12,7 @@ const blogListSection = document.getElementById('blog-List-Section')
 
 const blogCardList = blogList.map((data)=>
 `
+<hr>
 <div class="blog-article" style="margin-bottom: 3%; margin-top: 3%;">
         <div class="blog-article-img" id="${data.id}">
             <img src="${data.image}" alt="article">
@@ -20,7 +21,7 @@ const blogCardList = blogList.map((data)=>
             <a href="/blogpost.html?id=${data.id}" class="blog-heading-link" data-id=${data.id}>
                 <h3>${data.title}.</h3>
             </a> 
-            <span style="text-overflow: ellipsis !important;" >${data.info}</span>
+            <span>${data.info}</span>
         </div>
         <div style="gap: 2%; display:flex">
             <a href="/editBlog.html?id=${data.id}" class="editButton" data-id=${data.id}>Edit Blog </a>
@@ -29,6 +30,7 @@ const blogCardList = blogList.map((data)=>
         
     <div>
 </div>
+<hr>
 `
 
 ).join('')
