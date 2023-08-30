@@ -23,5 +23,7 @@ var blogInfo = document.createTextNode(blogPost.info);
 
 blogPostInfo.appendChild(blogInfo);
 
-console.log('blogPost',blogPost)
+var blogPostImage = document.getElementById("blog_Post_Image")
+
+blogPostImage.src = blogPost.image
 

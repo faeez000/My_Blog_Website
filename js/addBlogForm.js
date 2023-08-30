@@ -15,8 +15,16 @@ function updateLocalStorageArray() {
 }
 
 imageInput.onchange = function(){
-    imageUrl = URL.createObjectURL(imageInput.files[0])
-    blogImage.src = imageUrl
+
+    const fr = new FileReader()
+
+    fr.readAsDataURL(imageInput.files[0])
+
+    fr.addEventListener('load',()=>{
+        imageUrl = fr.result
+    })
+    const previewImageUrl = URL.createObjectURL(imageInput.files[0])
+    blogImage.src = previewImageUrl
 }
 
 

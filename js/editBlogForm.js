@@ -18,6 +18,7 @@ let blogDescription = document.getElementById("edit_blog_info")
 blogDescription.value = blogPost.info
 
 let blogImage = document.getElementById("blog_pic")
+blogImage.src = blogPost.image
 let imageInput = document.getElementById("blog_image_upload")
 let submitButton = document.getElementById("edit_blog_btn")
 
@@ -30,20 +31,20 @@ function updateLocalStorageArray() {
 }
 
 imageInput.onchange = function(){
-    imageUrl = URL.createObjectURL(imageInput.files[0])
-    blogImage.src = imageUrl
+    const fr = new FileReader()
+
+    fr.readAsDataURL(imageInput.files[0])
+
+    fr.addEventListener('load',()=>{
+        imageUrl = fr.result
+    })
+    const previewImageUrl = URL.createObjectURL(imageInput.files[0])
+    blogImage.src = previewImageUrl
 }
 
 
 
 submitButton.onclick = function(){
-
-    const data = {
-        id:blogId,
-        title:blogTitile.value,
-        info:blogDescription.value,
-        image:imageUrl
-    }
 
     var targetIndex = blogList.findIndex(function(blog) {
         return blog.id === blogId;
@@ -54,7 +55,7 @@ submitButton.onclick = function(){
         // Update the properties of the object
         blogList[targetIndex].title = blogTitile.value;
         blogList[targetIndex].info = blogDescription.value;
-  
+        blogList[targetIndex].image = imageUrl
         // Update the local storage with the modified JSON array
         localStorage.setItem("blogdata", JSON.stringify(blogList));
   

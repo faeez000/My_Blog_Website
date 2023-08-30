@@ -14,13 +14,13 @@ const blogCardList = blogList.map((data)=>
 `
 <div class="blog-article" style="margin-bottom: 3%; margin-top: 3%;">
         <div class="blog-article-img" id="${data.id}">
-            <img src="img/3.png" alt="article">
+            <img src="${data.image}" alt="article">
         </div>
         <div class="blog-article-content font1">
             <a href="/blogpost.html?id=${data.id}" class="blog-heading-link" data-id=${data.id}>
                 <h3>${data.title}.</h3>
             </a> 
-            <span>${data.info}</span>
+            <span style="text-overflow: ellipsis !important;" >${data.info}</span>
         </div>
         <div style="gap: 2%; display:flex">
             <a href="/editBlog.html?id=${data.id}" class="editButton" data-id=${data.id}>Edit Blog </a>
