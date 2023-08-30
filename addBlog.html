@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/addblogForm.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <title>iBlog - Heaven for bloggers</title>
+</head>
+<body>
+    <nav class="navigation max-width-1 m-auto">
+        <div class="nav-left">
+            <a href="/">
+                <span><img src="img/logo.png" width="94px" alt=""></span>
+            </a>
+            <ul>
+                <li><a href="/">Home</a></li>
+            
+            </ul>
+        </div>
+
+    </nav>
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+    <div class="blog-content font1 max-width-1 m-auto">
+        <div class="max-width-1 m-auto mx-1">
+            <h2>Create New Blog</h2>
+            <div class="contact-form">
+                <div class="form-box">
+                    <input type="text" placeholder="Enter Blog Title" id="blog_title">
+                </div>
+                <div class="form-box">
+                    <textarea cols="30" rows="5" placeholder="Enter Blog Information" id="blog_info"></textarea>
+                </div>
+                <div class="form-box">
+                    <img src=" " id="blog_pic">
+                    <label for="blog_image_upload">Add Image</label>
+                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="blog_image_upload">
+                </div>
+                <div class="form-box">
+                    <button class="btn" type="submit" id="add_blog_btn">Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/addBlogForm.js"></script>
+</body>
+
+</html>

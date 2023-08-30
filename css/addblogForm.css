@@ -1,0 +1,43 @@
+.blog-content{  
+    height: 100vh;
+    margin-top: 32px;
+    padding: 9px;
+    position: relative; 
+    overflow: hidden;
+  }
+  
+  .blog-content::after {
+    content: "";
+    background-image: url("../img/11.svg");
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: inherit;
+    opacity: 0.15;
+    border-radius: 12px;
+    z-index: -1;
+  }
+
+  label{
+    display: block;
+    width: 200px;
+    background: #e3362c;
+    color: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #blog_pic{
+    width: 200px;
+    height: 100px;
+    border-radius: 20%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  #blog_image_upload{
+    display: none;
+  }
+ 
